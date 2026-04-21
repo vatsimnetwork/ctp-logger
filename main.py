@@ -4,8 +4,8 @@ import zipfile
 import os
 import signal
 
-INTERVAL = 7.5
-BACKUP_DIR = "backups"
+INTERVAL = 7.5 # you can change this
+BACKUP_DIR = "logs" # don't change this unless you know what you are doing
 
 os.makedirs(BACKUP_DIR, exist_ok=True)
 
