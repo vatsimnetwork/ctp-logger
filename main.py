@@ -39,7 +39,7 @@ def backup(previous_data):
     zip_path = os.path.join(BACKUP_DIR, f"{current_ts}.zip")
 
     with zipfile.ZipFile(zip_path, "w", compression=zipfile.ZIP_DEFLATED) as z:
-        z.writestr("data.json", current_data.text)
+        z.writestr(f"{current_ts}.json", current_data.text)
 
     print("Backup saved:", zip_path)
     return current_data
